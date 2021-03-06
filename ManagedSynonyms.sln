@@ -18,9 +18,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution", "_Solution", "{
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sitecore.Feature.ManagedSynonyms", "Sitecore.Feature.ManagedSynonyms\Sitecore.Feature.ManagedSynonyms.csproj", "{54976BC4-4E13-436B-B7FF-E5A824D5BA83}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54976BC4-4E13-436B-B7FF-E5A824D5BA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54976BC4-4E13-436B-B7FF-E5A824D5BA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54976BC4-4E13-436B-B7FF-E5A824D5BA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54976BC4-4E13-436B-B7FF-E5A824D5BA83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54976BC4-4E13-436B-B7FF-E5A824D5BA83} = {17DD5718-6E13-4F2C-9738-B410396D4552}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
