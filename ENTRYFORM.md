@@ -9,22 +9,19 @@
 You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
 
 ## Team name
-
-### **Free Belarusians Team**
-
-![Hackathon team](docs/images/Hackathon-selfie.jpg?raw=true "Hackathon team")
+⟹ Write the name of your Hackathon team here
 
 ## Category
-The Best enhancement to the Sitecore Admin (XP) for Content Editors & Marketers
+⟹ Write the name of the selected category
 
 ## Description
-The "Managed Synonyms" module resolves an issue with managing the SOLR synonyms in the Sitecore. It was impossible before. 
+⟹ Write a clear description of your hackathon entry.  
 
-Our entry in the Sitecore Hackathon 2021 is to make a posibillity for both the developers and the content authors to manage the synonyms flexible and fast through the module in the Sitecore. 
+  - Module Purpose
+  - What problem was solved (if any)
+    - How does this module solve it
 
-You can know more by [this documentation.](/SynonymsManagedModule.md)
-
-_You can alternately paste a  to a document within this repo containing the description._
+_You can alternately paste a [link here](#docs) to a document within this repo containing the description._
 
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
@@ -32,24 +29,39 @@ _You can alternately paste a  to a document within this repo containing the desc
 ⟹ [Replace this Video link](#video-link)
 
 
+
 ## Pre-requisites and Dependencies
 
-NuGet Dependencies: 
+⟹ Does your module rely on other Sitecore modules or frameworks?
 
-- Newtonsoft.Json v. 11.0.2
-- SolrNet v. 1.0.19
+- List any dependencies
+- Or other modules that must be installed
+- Or services that must be enabled/configured
+
+_Remove this subsection if your entry does not have any prerequisites other than Sitecore_
 
 ## Installation instructions
+⟹ Write a short clear step-wise instruction on how to install your module.  
+
+> _A simple well-described installation process is required to win the Hackathon._  
+> Feel free to use any of the following tools/formats as part of the installation:
+> - Sitecore Package files
+> - Docker image builds
+> - Sitecore CLI
+> - msbuild
+> - npm / yarn
+> 
+> _Do not use_
+> - TDS
+> - Unicorn
  
-1. Donwload the [Managed Synonyms Package](/SitecorePackage) and Upload it to the Sitecore using the Installation Wizard 
+f. ex. 
 
- ![Package Installation wizard ](/docs/images/installation-wizzard.jpg)
-
-2. Select "Managed Synonyms Package"
-
- ![Select appropriate package ](/docs/images/package-window.jpg)
- <!-- Finished here -->
-
+1. Start docker environment using `.\Start-Hackathon.ps1`
+2. Open solution in Visual Studio and run build
+3. Use the Sitecore Installation wizard to install the [package](#link-to-package)
+4. ...
+5. profit
 
 ### Configuration
 ⟹ If there are any custom configuration that has to be set manually then remember to add all details here.
@@ -57,37 +69,19 @@ NuGet Dependencies:
 _Remove this subsection if your entry does not require any configuration that is not fully covered in the installation instructions already_
 
 ## Usage instructions
+⟹ Provide documentation about your module, how do the users use your module, where are things located, what do the icons mean, are there any secret shortcuts etc.
 
-When the ![Managed Synonyms Package](https://github.com/Sitecore-Hackathon/2021-Free-Belarusians-Team/blob/main/SitecorePackage/Managed%20Synonyms%20Package-1.0.0.zip) successfully installed, go through the following steps:
+Include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
 
-1. Populate a target search index schema (in our case - the SXA master index)
+![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
 
- ![Populate schema ](/docs/images/populate-schema.jpg)
+You can embed images of different formats too:
 
-2. In the Content Editor navigate to */sitecore/system/Modules/**ManagedSynonyms*** and put a target index's core name (just validate in SOLR). Also, possible to put more than one using the `|` between names
+![Deal With It](docs/images/deal-with-it.gif?raw=true "Deal With It")
 
- ![Synonyms configuration ](/docs/images/root-synonyms-config.jpg)
+And you can embed external images too:
 
-3. Select the **ManagedSynonyms** item and insert (using Insert Options) the `ManagedSynonym` item
+![Random](https://thiscatdoesnotexist.com/)
 
- ![Synonyms insert options ](/docs/images/insert-options.jpg)
-
-4. Put the synonyms to the **Synonyms** field. Use the `|` between words.
-
- ![synonyms item ](/docs/images/synonym-example.jpg)
-
-5. Navigate to the custom Sitecore Reabon - **ManagedSynonyms** and click the **Sync Managed Synonyms** action. Confirm the dialog and make sure you got the Success message after - that means the synomyms published to the SOLR
-
- ![Ribbon ](/docs/images/ribbon-button.jpg)
-
-6. Validate the synomyns published to the target index's schema with the following link (do not forget to put your target index name) 
-
-Example url: https://localhost:8985/solr/sc.hackaton_sxa_master_index/schema/analysis/synonyms/english
-
- ![synonyms schema](/docs/images/synonyms-solr.jpg)
-
-7. Go to the site and try to search with added synonyms
-
- ![synonyms schema](/docs/images/search-for-superman.jpg)
-
-8. The Result of search doesn't contain `superman` word anywhere. It's just synonym of `mvp` word.
+## Comments
+If you'd like to make additional comments that is important for your module entry.
