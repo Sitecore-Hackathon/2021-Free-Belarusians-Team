@@ -86,3 +86,5 @@ Example url: https://localhost:8985/solr/sc.hackaton_sxa_master_index/schema/ana
  ![synonyms schema](/docs/images/search-for-superman.jpg)
 
 8. The Result of search doesn't contain `superman` word anywhere. It's just synonym of `mvp` word.
+
+ ![synonyms schema](/docs/images/show-search-result.jpg)
