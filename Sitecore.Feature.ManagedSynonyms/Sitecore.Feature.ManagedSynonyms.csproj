@@ -118,7 +118,7 @@
     <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="AppConfig\Include\Feature\Sitecore.Feature.ManagedSynonyms.config" />
+    <Content Include="App_Config\Include\Feature\Sitecore.Feature.ManagedSynonyms.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
