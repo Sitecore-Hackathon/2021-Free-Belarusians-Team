@@ -71,7 +71,7 @@ When the ![Managed Synonyms Package](https://github.com/Sitecore-Hackathon/2021-
 
  ![synonyms item ](/docs/images/synonym-example.jpg)
 
-5. Navigate to the custom Sitecore Reabon - **ManagedSynonyms** and click the **Sync Managed Synonyms** action. Confirm the dialog and make sure you got the Success message after - that means the synomyms published to the SOLR
+5. Navigate to the custom Sitecore Ribbon - **ManagedSynonyms** and click the **Sync Managed Synonyms** action. Confirm the dialog and make sure you got the Success message after - that means the synomyms published to the SOLR
 
  ![Ribbon ](/docs/images/ribbon-button.jpg)
 
