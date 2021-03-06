@@ -82,7 +82,7 @@ When the [Managed Synonyms Package](/SitecorePackage) successfully installed, go
 
 6. Validate the synomyns published to the target index's schema with the following link (do not forget to put your target index name) 
 
-https://localhost:8985/solr/#/sc.hackaton_sxa_master_index/dataimport/undefined
+Example url: https://localhost:8985/solr/sc.hackaton_sxa_master_index/schema/analysis/synonyms/english
 
  ![synonyms schema](/docs/images/synonyms-solr.jpg)
 
