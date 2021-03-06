@@ -62,44 +62,35 @@ When the [Managed Synonyms Package](/SitecorePackage) successfully installed, go
 
 1. Populate a target search index schema (in our case - the SXA master index)
 
-[image]
+ ![Populate schema ](/docs/images/populate-schema.jpg)
 
 2. In the Content Editor navigate to */sitecore/system/Modules/**ManagedSynonyms*** and put a target index's core name (just validate in SOLR). Also, possible to put more than one using the `|` between names
 
-[image]
+ ![Synonyms configuration ](/docs/images/root-synonyms-config.jpg)
 
 3. Select the **ManagedSynonyms** item and insert (using Insert Options) the `ManagedSynonym` item
 
-[image]
+ ![Synonyms insert options ](/docs/images/insert-options.jpg)
 
 4. Put the synonyms to the **Synonyms** field. Use the `|` between words.
 
-[image]
+ ![synonyms item ](/docs/images/synonym-example.jpg)
 
 5. Navigate to the custom Sitecore Reabon - **ManagedSynonyms** and click the **Sync Managed Synonyms** action. Confirm the dialog and make sure you got the Success message after - that means the synomyms published to the SOLR
 
-[image]
+ ![Ribbon ](/docs/images/ribbon-button.jpg)
 
 6. Validate the synomyns published to the target index's schema with the following link (do not forget to put your target index name) 
 
 https://localhost:8985/solr/#/sc.hackaton_sxa_master_index/dataimport/undefined
 
-[image]
+ ![synonyms schema](/docs/images/synonyms-solr.jpg)
 
 7. Go to the site and try to search with added synonyms
 
-[image] <!-- Search Sample -->
+ ![synonyms schema](/docs/images/search-for-superman.jpg)
 
-
-![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
-
-You can embed images of different formats too:
-
-![Deal With It](docs/images/deal-with-it.gif?raw=true "Deal With It")
-
-And you can embed external images too:
-
-![Random](https://thiscatdoesnotexist.com/)
+8. The Result of search doesn't contain `superman` word anywhere. It's just synonym of `mvp` word.
 
 ## Comments
 If you'd like to make additional comments that is important for your module entry.
