@@ -17,10 +17,14 @@ Next steps of this process:
 
 1. Create a Synonym group item under */sitecore/system/Modules/**ManagedSynonyms***
 
+    The main logic is triggered in `Sitecore.Feature.ManagedSynonyms.Services/SynonymItemsService`
+
+     ![Cores ](/docs/images/GetCore.png)
+
 
 2. Trigger the action in the custom **ManagedSynonyms** Ribbon. It synchronizes the synonym group items with target solr core
 
     The main procces is happening in `Sitecore.Feature.ManagedSynonyms.Services.SymmetricSynonymsService`:
 
-    ![Patch ](/docs/images/sync.png)
+    ![Sync ](/docs/images/Sync.png)
 
