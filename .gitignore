@@ -39,3 +39,4 @@ _ReSharper*/
 .vs/
 #Nuget packages folder
 packages/
+/Sitecore.Feature.ManagedSynonyms/Properties/PublishProfiles/FolderProfile.pubxml
