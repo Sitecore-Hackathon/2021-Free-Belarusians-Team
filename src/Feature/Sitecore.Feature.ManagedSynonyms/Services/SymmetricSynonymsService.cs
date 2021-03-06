@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Sitecore.Diagnostics;
-using Sitecore.Jobs;
 
 namespace Sitecore.Feature.ManagedSynonyms.Services
 {
@@ -18,16 +17,19 @@ namespace Sitecore.Feature.ManagedSynonyms.Services
             _synonymItemsService = synonymItemsService;
         }
         
+        /// <summary>
+        /// Executes synchronization of both the Sitecore Synonyms And The Solr managed Synonyms
+        /// </summary>
         public void Sync()
         {
             try
             {
                 var synonymItems = _synonymItemsService.GetSynonyms();
-                var solrCores = _synonymItemsService.GetCores().ToList();
+                var solrCores = _synonymItemsService.GetCore().ToList();
 
                 Parallel.ForEach(solrCores, async core =>
                 {
-                    var symmetricSynonyms = await _clientService.GetSymmetricSynonyms(core);
+                    var symmetricSynonyms = await _clientService.GetSymmetricSynonymsAsync(core);
                     var solrSynonyms = symmetricSynonyms.SynonymMappings.ManagedMap.Keys;
                     var validSynonyms = new List<string>();
 
@@ -38,13 +40,13 @@ namespace Sitecore.Feature.ManagedSynonyms.Services
                             if (solrSynonyms.Contains(synonym))
                                 validSynonyms.Add(synonym);
                         }
-                        await _clientService.AddSymmetricSynonyms(core, synonymItem.ToArray());
+                        await _clientService.AddSymmetricSynonymsAsync(core, synonymItem.ToArray());
                     }
 
                     var invalidSynonyms = solrSynonyms.Except(validSynonyms);
                     foreach (var synonym in invalidSynonyms)
                     {
-                        await _clientService.DeleteSymmetricSynonyms(core, synonym);
+                        await _clientService.DeleteSymmetricSynonymsAsync(core, synonym);
                     }
                 });
                 Parallel.ForEach(solrCores, core => _clientService.ReloadCore(core));

@@ -1182,9 +1182,12 @@ namespace Sitecore.Feature.ManagedSynonyms.PopulateSolrSchema
                         (object)new XElement((XName)"ignoreCase", (object)"true"),
                         (object)new XElement((XName)"expand", (object)"true")
                     }));*/
+            
+            // Remove hardcoded synonyms from file& and filters. Added custom pipeline instead. 
             xelement3.Add(new XElement("filters",
                 new XElement("class", "solr.ManagedSynonymGraphFilterFactory"),
                 new XElement("managed", "english")));
+
             xelement3.Add(
                 (object)new XElement(
                     (XName)"filters",

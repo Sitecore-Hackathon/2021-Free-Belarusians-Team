@@ -24,7 +24,7 @@ namespace Sitecore.Feature.ManagedSynonyms.Commands
                 if (args.Result == "yes")
                 {
                     ProgressBox.Execute("Sync Synonyms", "Sync Synonyms", Sync);
-                    SheerResponse.Alert("Synonyms sync has been completed");
+                    SheerResponse.Alert("Sync has been completed");
                 }
             }
         }

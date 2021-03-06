@@ -6,13 +6,12 @@ using Sitecore.Diagnostics;
 
 namespace Sitecore.Feature.ManagedSynonyms.Services
 {
-    public class SynonymItemsService:ISynonymItemsService
+    public class SynonymItemsService : ISynonymItemsService
     {
-        public IEnumerable<string> GetCores()
+        public IEnumerable<string> GetCore()
         {
             return GetRoot()[Templates.ManagedSynonyms.ManagedSynonymsCoresFieldId]
                 ?.Split(new[] { "|" }, StringSplitOptions.RemoveEmptyEntries);
-
         }
 
         public IEnumerable<IEnumerable<string>> GetSynonyms()
@@ -25,11 +24,13 @@ namespace Sitecore.Feature.ManagedSynonyms.Services
                     StringSplitOptions.RemoveEmptyEntries));
         }
         
-        public Item GetRoot()
+        private Item GetRoot()
         {
             var path = Configuration.Settings.GetSetting("ManagedSynonyms.Folder");
             var item = Data.Database.GetDatabase("master").GetItem(path);
-            Assert.IsTrue(item.TemplateID == Templates.ManagedSynonyms.ManagedSynonymsFolderTemplateId,"Invalid synonyms folder");
+            Assert.IsTrue(
+                item.TemplateID == Templates.ManagedSynonyms.ManagedSynonymsFolderTemplateId,
+                "Invalid synonyms folder");
             return item;
 
         }

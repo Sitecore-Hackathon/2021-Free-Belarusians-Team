@@ -58,7 +58,7 @@ _Remove this subsection if your entry does not require any configuration that is
 
 ## Usage instructions
 
-When the [Managed Synonyms Package](/SitecorePackage) successfully installed, go through the following steps:
+When the ![Managed Synonyms Package](https://github.com/Sitecore-Hackathon/2021-Free-Belarusians-Team/blob/main/SitecorePackage/Managed%20Synonyms%20Package-1.0.0.zip) successfully installed, go through the following steps:
 
 1. Populate a target search index schema (in our case - the SXA master index)
 
@@ -91,6 +91,3 @@ Example url: https://localhost:8985/solr/sc.hackaton_sxa_master_index/schema/ana
  ![synonyms schema](/docs/images/search-for-superman.jpg)
 
 8. The Result of search doesn't contain `superman` word anywhere. It's just synonym of `mvp` word.
-
-## Comments
-If you'd like to make additional comments that is important for your module entry.
