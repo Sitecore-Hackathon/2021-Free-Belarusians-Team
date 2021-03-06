@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Configuration;
-using System.IdentityModel.Protocols.WSTrust;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
