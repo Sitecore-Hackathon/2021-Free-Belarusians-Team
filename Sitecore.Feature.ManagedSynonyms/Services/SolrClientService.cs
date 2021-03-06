@@ -3,8 +3,8 @@ using System.Configuration;
 using System.IdentityModel.Protocols.WSTrust;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 using System.Net.Http;
+using Newtonsoft.Json;
 using Sitecore.Feature.ManagedSynonyms.Models;
 
 namespace Sitecore.Feature.ManagedSynonyms.Services
