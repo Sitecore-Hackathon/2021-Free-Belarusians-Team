@@ -1,0 +1,2 @@
+# Synonyms Managed Module
+

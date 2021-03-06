@@ -9,19 +9,22 @@
 You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
 
 ## Team name
-⟹ Write the name of your Hackathon team here
+
+### **Free Belarusians Team**
+
+![Hackathon team](docs/images/Hackathon-selfie.jpg?raw=true "Hackathon team")
 
 ## Category
-⟹ Write the name of the selected category
+The Best enhancement to the Sitecore Admin (XP) for Content Editors & Marketers
 
 ## Description
-⟹ Write a clear description of your hackathon entry.  
+Our entry in Sitecore Hackathon 2021 is the make developers and content authors easier with Synonyms Management module when they work with SOLR Synonyms Search. 
 
-  - Module Purpose
-  - What problem was solved (if any)
-    - How does this module solve it
+The "Synonyms Managed Package" resolves an issue with managing synonyms by Sitecore Content Management. It was impossible before. 
 
-_You can alternately paste a [link here](#docs) to a document within this repo containing the description._
+You can know more by [this documentation.](/SynonymsManagedModule.md)
+
+_You can alternately paste a  to a document within this repo containing the description._
 
 ## Video link
 ⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
@@ -32,33 +35,22 @@ _You can alternately paste a [link here](#docs) to a document within this repo c
 
 ## Pre-requisites and Dependencies
 
-⟹ Does your module rely on other Sitecore modules or frameworks?
+NPM Dependencies: 
 
-- List any dependencies
-- Or other modules that must be installed
-- Or services that must be enabled/configured
-
-_Remove this subsection if your entry does not have any prerequisites other than Sitecore_
+- Newtonsoft.Json v. 11.0.2
+- SolrNet v. 1.0.19
 
 ## Installation instructions
-⟹ Write a short clear step-wise instruction on how to install your module.  
-
-> _A simple well-described installation process is required to win the Hackathon._  
-> Feel free to use any of the following tools/formats as part of the installation:
-> - Sitecore Package files
-> - Docker image builds
-> - Sitecore CLI
-> - msbuild
-> - npm / yarn
-> 
-> _Do not use_
-> - TDS
-> - Unicorn
  
-f. ex. 
+1. Open Installation Sitecore Wizard 
 
-1. Start docker environment using `.\Start-Hackathon.ps1`
-2. Open solution in Visual Studio and run build
+ ![Package Installation wizard ](/docs/images/installation-wizzard.jpg)
+
+2. Select "Managed Synonyms Package"
+
+ ![Select appropriate package ](/docs/images/package-window.jpg)
+ <!-- Finished here -->
+
 3. Use the Sitecore Installation wizard to install the [package](#link-to-package)
 4. ...
 5. profit
